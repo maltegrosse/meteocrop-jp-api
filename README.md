@@ -5,7 +5,9 @@ This database stores daily weather data of 1980-2008 (from 1976 onward in some a
 further information: http://meteocrop.dc.affrc.go.jp/explan.php
 
 ## Run
-`docker run -it -d maltegrosse/meteocrop-jp-api:last`
+`docker pull maltegrosse/meteocrop-jp-api:latest`
+
+`docker run -it  maltegrosse/meteocrop-jp-api:latest`
 
 Environmentvariables:
 - `AMEDAS_STATION_URL`, default: https://meteocrop.dc.affrc.go.jp/csv/amedas.csv
