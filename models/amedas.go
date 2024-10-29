@@ -127,7 +127,7 @@ func (a *AmedasStations) getClosestStation(lat float64, lon float64) (station Am
 	return a.Stations[latestStation], nil
 }
 func (a *AmedasStation) GetWeatherData(fromDate time.Time, toDate time.Time) (h HistoricalWeatherObservations, err error) {
-	
+
 	client := http.Client{}
 	req, err := http.NewRequest("GET", a.URL, nil)
 	if err != nil {
@@ -142,7 +142,7 @@ func (a *AmedasStation) GetWeatherData(fromDate time.Time, toDate time.Time) (h 
 	if res.StatusCode != 200 {
 		return h, errors.New(fmt.Sprint("error calling url", a.URL, "http-code", res.StatusCode))
 	}
-	respBody, err := ioutil.ReadAll(res.Body)
+	respBody, err := io.ReadAll(res.Body)
 	if err != nil {
 		return h, err
 	}

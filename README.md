@@ -10,8 +10,8 @@ further information: http://meteocrop.dc.affrc.go.jp/explan.php
 `docker run -it  maltegrosse/meteocrop-jp-api:latest`
 
 Environmentvariables:
-- `AMEDAS_STATION_URL`, default: https://meteocrop.dc.affrc.go.jp/csv/amedas.csv
-- `AMEDAS_WEATHER_URL`, default: https://meteocrop.dc.affrc.go.jp/real/download.php?kind=5&id=
+- `AMEDAS_STATION_URL`, default: https://meteocrop.rad.naro.go.jp/real/csv/ame.csv
+- `AMEDAS_WEATHER_URL`, default: https://meteocrop.rad.naro.go.jp/real/download.php?kind=5&id=
 - `API_PORT`, default: 8080
 	
 ## Usage

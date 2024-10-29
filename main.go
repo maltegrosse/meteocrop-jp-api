@@ -12,8 +12,8 @@ import (
 
 func main() {
 	log.Logger.Debug("loading AMEDAS stations")
-	amedasUrl := getEnv("AMEDAS_STATION_URL", "https://meteocrop.dc.affrc.go.jp/csv/amedas.csv")
-	amedasWeatherUrl := getEnv("AMEDAS_WEATHER_URL", "https://meteocrop.dc.affrc.go.jp/real/download.php?kind=5&id=")
+	amedasUrl := getEnv("AMEDAS_STATION_URL", "https://meteocrop.rad.naro.go.jp/real/csv/ame.csv")
+	amedasWeatherUrl := getEnv("AMEDAS_WEATHER_URL", "https://meteocrop.rad.naro.go.jp/real/download.php?kind=5&id=")
 	models.Stations = models.AmedasStations{}
 	err := models.Stations.GetStations(amedasUrl, amedasWeatherUrl)
 	if err != nil {
